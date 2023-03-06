@@ -26,7 +26,7 @@ export default function Navbar() {
 						<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" /*to="/cv"*/ disabled><i>Curriculum vitae</i></NavLink>
 					</li>
 					<li>
-						<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" /*to="/projects"*/ disabled>Projects</NavLink>
+						<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" to="/projects">Projects</NavLink>
 					</li>
 					<li>
 						<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" /*to="/contact"*/ disabled>Contact</NavLink>

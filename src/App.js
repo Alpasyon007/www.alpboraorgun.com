@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import AboutMe from "./components/aboutMe";
+import Projects from "./components/projects";
 
 const App = () => {
 	return (
@@ -18,7 +19,7 @@ const App = () => {
 				<Route exact path="/" element={<Home />} />
 				<Route exact path="/about-me" element={<AboutMe />} />
 				<Route exact path="/cv" element={<Home />} />
-				<Route exact path="/projects" element={<Home />} />
+				<Route exact path="/projects" element={<Projects />} />
 				<Route exact path="/contact" element={<Home />} />
 
 			</Routes>

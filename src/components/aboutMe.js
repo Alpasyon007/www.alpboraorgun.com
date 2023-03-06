@@ -57,6 +57,12 @@ export default function AboutMe() {
 								<p>•	Work with many programming languages such as C, Objective-C, C++, Java, Lua, JavaScript, Python and Perl with the main one being C++.</p>
 								<p>•	Worked together with multiple teams including Design Teams and Quality Control teams to implement new features and fix existing bugs.</p>
 								<p>•	Worked on many platforms including Windows, Linux, MacOS, iOS, Android, and Nintendo Switch.</p>
+								<blockquote>
+									You are becoming hysterical
+								<footer>
+									<cite>- Working Joe, Alien: Isolation</cite>
+								</footer>
+								</blockquote>
 								<details>
 									<summary>What I worked on</summary>
 									<article style={{"padding": "0"}}>
@@ -99,6 +105,12 @@ export default function AboutMe() {
 									<h3>University of Surrey</h3>
 									<h4>Electronic Engineering BEng</h4>
 								</hgroup>
+								<blockquote>
+								“We all make choices, but in the end... our choices make us.”
+								<footer>
+									<cite>- Andrew Ryan, Bioshock</cite>
+								</footer>
+								</blockquote>
 								<details>
 									<summary>My studies</summary>
 									<a href={midtermReport} target="_blank">
