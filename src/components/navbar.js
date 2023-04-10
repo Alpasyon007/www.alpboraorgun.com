@@ -18,43 +18,48 @@ export default function Navbar() {
 	  setShowAside(!showAside);
 	};
 
+	const renderNavElements = () => {
+		return (
+			<ul>
+				<li>
+					<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" to="/about-me">About Me</NavLink>
+				</li>
+				<li>
+					<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" /*to="/cv"*/ disabled><i>Curriculum vitae</i></NavLink>
+				</li>
+				<li>
+					<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" to="/projects" disabled>Projects</NavLink>
+				</li>
+				<li>
+					<a style={{ "backgroundColor": "transparent" }} className="contrast" href="mailto:alp@orgun.org">Contact</a>
+				</li>
+				<li>
+					<a className="contrast" href="https://github.com/Alpasyon007" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+				</li>
+			</ul>
+		);
+	}
+
+	const renderNavLogo = () => {
+		return (
+			<ul>
+				<li>
+					<NavLink style={{ "backgroundColor": "transparent" }} to="/">
+						<img style={{"filter": "invert(100%)"}} src={signature} width="200"></img>
+					</NavLink>
+				</li>
+			</ul>
+		);
+	}
+
 	return (
 		<div>
 			<nav className="container-fluid navigation-menu">
-				<ul>
-					<li>
-						<NavLink style={{ "backgroundColor": "transparent" }} to="/">
-							<img style={{"filter": "invert(100%)"}} src={signature} width="200"></img>
-						</NavLink>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" to="/about-me">About Me</NavLink>
-					</li>
-					<li>
-						<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" /*to="/cv"*/ disabled><i>Curriculum vitae</i></NavLink>
-					</li>
-					<li>
-						<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" to="/projects">Projects</NavLink>
-					</li>
-					<li>
-						<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" /*to="/contact"*/ disabled>Contact</NavLink>
-					</li>
-					<li>
-						<a className="contrast" href="https://github.com/Alpasyon007" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
-					</li>
-					<li></li>
-				</ul>
+				{renderNavLogo()}
+				{renderNavElements()}
 			</nav>
 			<nav className="container hamburg">
-				<ul>
-					<li>
-						<NavLink style={{ "backgroundColor": "transparent" }} to="/">
-							<img style={{"filter": "invert(100%)"}} src={signature} width="200"></img>
-						</NavLink>
-					</li>
-				</ul>
+				{renderNavLogo()}
 				<ul>
 					<li>
 						<a className="contrast hamburg-toggle" onClick={toggleAside}>{ showAside ? (<FontAwesomeIcon style={{fontSize:"56px"}} icon={faXmark}/>) : (<FontAwesomeIcon style={{fontSize:"48px"}} icon={faBars}/>)}</a>
@@ -67,23 +72,7 @@ export default function Navbar() {
 			{showAside && (
 			<aside className={`hamburg ${showAside ? "hamburg-visible" : ""}`}>
 				<nav className="container" style={{textAlign:"center"}}>
-					<ul>
-						<li>
-							<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" to="/about-me">About Me</NavLink>
-						</li>
-						<li>
-							<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" /*to="/cv"*/ disabled><i>Curriculum vitae</i></NavLink>
-						</li>
-						<li>
-							<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" to="/projects">Projects</NavLink>
-						</li>
-						<li>
-							<NavLink style={{ "backgroundColor": "transparent" }} className="contrast" /*to="/contact"*/ disabled>Contact</NavLink>
-						</li>
-						<li>
-							<a className="contrast" href="https://github.com/Alpasyon007" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
-						</li>
-					</ul>
+					{renderNavElements()}
 				</nav>
 			</aside>
 			)}
